@@ -30,3 +30,61 @@ body {
   font-size: 100px;
   color: black;
 }
+
+
+/* CONTACT US STYLING */
+
+/* Nav Bar styling */
+#Nav{
+
+  width: 100%;
+  position: absolute;
+  display: inline;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+}
+
+#Nav > ul{
+  padding: 2%;
+
+  list-style-type: none;
+
+}
+
+li{
+    float: right;
+  display: inline;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#titlenav{
+  text-align: center;
+}
+
+li> a{
+  list-style: none;
+  color: white;
+}
+
+/* END Nav Bar styling */
+
+
+form{
+  width: 20%;
+}
+
+
+input{
+  width: 100%;
+}
+
+#Message{
+  height: 10vh;
+}
+#submitcontact{
+  margin: auto;
+}
+/* END OFCONTACT US STYLING */
