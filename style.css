@@ -32,7 +32,7 @@ body {
 }
 
 
-/* CONTACT US STYLING */
+
 
 /* Nav Bar styling */
 #Nav{
@@ -70,21 +70,3 @@ li> a{
 }
 
 /* END Nav Bar styling */
-
-
-form{
-  width: 20%;
-}
-
-
-input{
-  width: 100%;
-}
-
-#Message{
-  height: 10vh;
-}
-#submitcontact{
-  margin: auto;
-}
-/* END OFCONTACT US STYLING */
