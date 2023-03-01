@@ -54,7 +54,7 @@ body {
 }
 
 li{
-    float: right;
+  text-align: center;
   display: inline;
   padding-left: 2%;
   padding-right: 2%;

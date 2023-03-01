@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PC PARTS</title>
+    <style>
+
+      ol{
+        padding: 0%;
+        align-items: center;
+      }
+      .panel
+			{
+				background-color:#F8FDFF ;
+				border: 1px solid;
+				overflow-y:scroll;
+				max-height:65vh;
+				width:75%;
+				border-radius: 10px;
+			}
+
+      .Imgcontainer {
+        position: relative;
+        text-align: center;
+        color: white;
+        text-align: center; 
+        padding: 1%; 
+        background-color: #efefef;
+        
+      }
+
+      .ImgText {
+        position: absolute;
+        top: 50%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-size: 2vw;
+        font-weight: bold;
+      }
+
+      .Row{
+        min-width:75%;
+        text-align: left;
+
+      }
+
+
+      .Question{
+        min-width: 60vw;
+        border:0.1em solid #000000;
+        margin: 0;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+
+      .Question:hover{
+        min-width: 60vw;
+        text-align: left;
+        background-color: #808080 !important;
+        color: white !important;
+      }
+
+
+
+      .Answer{
+        min-width: 60vw;
+        padding: 0;
+        display: none;
+        border:0.1em solid #000000;
+        margin: 0;      
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-align: center;
+      }
+
+      
+      .arrow {
+        position: relative;
+        border: solid black;
+        margin-right: 0.5vw;
+        border-width: 0 0.1vw 0.1vw 0;
+        display: inline-block;
+        padding: 0.3vw;
+      }
+
+
+
+
+
+    </style>
+  </head>
+  <body id="informationbody" style="display: flex;">
+
+    <nav id="Nav">
+
+        
+
+        <ul id="navBarUl">
+            <div id="titlenav"><h1>PC PARTS</h1></div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productpage.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+  
+  
+    </nav>
+
+        <div class="flex" style="flex-direction: column; ">
+          <!-- To create more rows copy from and increment ids by 1 -->
+          <ul>
+          <li  class = "Row" >
+            <div id="row0" onclick="extend(this)" class="Question flex" style="justify-content: space-between; ">Question Here</p> </div>
+            <li id="0" class="Answer">Answer Here</li>
+          </li >
+          <li   class = "Row" >
+            <div id="row1" onclick="extend(this)" class="Question flex" style="justify-content: space-between; ">Question Here</p> </div>
+            <li id="1" class="Answer">Answer Here</li>
+          </li >
+          <li   class = "Row" >
+            <div id="row2" onclick="extend(this)" class="Question flex" style="justify-content: space-between; ">Question Here</p> </div>
+            <li id="2" class="Answer">Answer Here</li>
+          </li >
+          <li   class = "Row" >
+            <div id="row3" onclick="extend(this)" class="Question flex" style="justify-content: space-between; ">Question Here</p> </div>
+            <li id="3" class="Answer">Answer Here</li>
+          </li >
+        </ul>
+      </div>
+
+    </div>
+
+    <script>
+    var last;
+    var toggle = true;
+
+    function extend(element){
+    console.log(last);
+    console.log("last");
+    var id = element.id.charAt(element.id.length - 1);
+    if(last != null){
+      console.log("last1");
+      if(last == id){
+        console.log("last2");
+        console.log(toggle)
+        if(toggle == true){
+          console.log("last3");
+          document.getElementById(id).style.display = "none";
+          toggle = false;
+          return;
+        }
+        console.log("last");
+        document.getElementById(id).style.display = "block";
+        toggle =true;
+        return;
+      }
+    }
+
+    last = id;
+
+    console.log(id);
+
+    const collection = document.getElementsByClassName("Row");
+
+    console.log(collection.length)
+
+    for(var i = 0; i < collection.length; i++){
+      console.log(document.getElementById(i).id)
+      document.getElementById(i).style.display = "none";
+      document.getElementById("row"+i).style.backgroundColor = "#FFFFFF";
+      document.getElementById("row"+i).style.color = "#000000";
+
+    }
+
+    document.getElementById(id).style.display = "block";
+    element.style.backgroundColor = "#000000";
+    element.style.color  = "#FFFFFF";
+
+    }
+    </script>
+
+  </body>
+</html>
